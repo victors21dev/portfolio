@@ -22,8 +22,8 @@ const item = {
 
 export function EngineeringSection() {
   return (
-    <section className="py-32 relative">
-      <div className="container mx-auto space-y-20">
+    <section className="py-20 relative">
+      <div className="container mx-auto px-6 space-y-12">
         {/* Título */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

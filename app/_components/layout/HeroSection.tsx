@@ -30,14 +30,14 @@ const item = {
 
 const HeroPage = () => {
   return (
-    <section className="relative h-[90vh] flex items-center overflow-hidden">
+    <section className="relative min-h-[85vh] flex items-center overflow-hidden py-20">
       {/* Background Glow */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute -top-25 -left-25 w-100 h-100 bg-primary/10 rounded-full blur-3xl animate-pulse" />
         <div className="absolute -bottom-30 -right-30 w-100 h-100 bg-indigo-500/10 rounded-full blur-3xl animate-pulse" />
       </div>
 
-      <div className="container mx-auto grid lg:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-10 items-center">
         {/* Lado esquerdo */}
         <motion.div
           variants={container}

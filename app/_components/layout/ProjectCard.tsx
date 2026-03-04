@@ -4,8 +4,10 @@ import Image from "next/image";
 import { Button } from "../ui/button";
 import { Card } from "../ui/card";
 import { Github, ExternalLink } from "lucide-react";
+import Link from "next/link";
 
 export type ProjectCardProps = {
+  slug: string;
   title: string;
   description: string;
   image: string;
@@ -16,6 +18,7 @@ export type ProjectCardProps = {
 };
 
 export function ProjectCard({
+  slug,
   title,
   description,
   image,
@@ -65,15 +68,22 @@ export function ProjectCard({
           </ul>
         </div>
 
-        <div className="flex gap-4 pt-4">
-          <Button asChild>
+        <div className="flex gap-4 pt-4 flex-wrap">
+          {/* Página interna (Case Técnico) */}
+          <Link href={`/projects/${slug}`}>
+            <Button>Ver Case Técnico</Button>
+          </Link>
+
+          {/* Deploy */}
+          <Button asChild variant="outline">
             <a href={liveUrl} target="_blank" rel="noopener noreferrer">
               <ExternalLink size={16} className="mr-2" />
               Deploy
             </a>
           </Button>
 
-          <Button variant="outline" asChild>
+          {/* GitHub */}
+          <Button asChild variant="outline">
             <a href={githubUrl} target="_blank" rel="noopener noreferrer">
               <Github size={16} className="mr-2" />
               GitHub
