@@ -1,6 +1,7 @@
 import { Button } from "../ui/button";
 import { Github, Linkedin, Download } from "lucide-react";
 import Link from "next/link";
+import { Terminal } from "./Terminal";
 
 const HeroPage = () => {
   return (
@@ -61,17 +62,10 @@ const HeroPage = () => {
             </Button>
           </div>
         </div>
-
         {/* Lado direito */}
         <div className="hidden lg:flex justify-center">
-          <div className="w-95 h-95 rounded-2xl bg-linear-to-br from-primary/10 to-indigo-500/10 border border-border backdrop-blur-xl flex items-center justify-center text-sm text-muted-foreground">
-            {/* Aqui você pode colocar:
-                - Screenshot de projeto
-                - Código estilizado
-                - Terminal fake
-                - Estatísticas técnicas
-            */}
-            <span>Preview técnico / Código / Dashboard</span>
+          <div className="hidden lg:flex justify-center">
+            <Terminal />
           </div>
         </div>
       </div>
